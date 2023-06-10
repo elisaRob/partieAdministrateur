@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root{
+    --fontFamilyTitre:'Pacifico', cursive;
+    --fontSizeTitre:calc(36px + 2vw);
+    --fontSizeParagraphe:calc(16px + 1vw);
+    --fontSizeTitrePageInscription:calc(20px + 2vw);
+    --fontSizeTitrePageRecuperation:calc(16px + 2vw);
+    --fontSizeButton:calc(12px + 1vw);
+    --fontSizeForm:calc(8px + 1vw)
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+/****************************PAGE PRINCIPAL INDEX.PHP ********************/
+
+
+
+.containerPagePrincipal{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    text-align:center;
+    
+    border-image: url(img/lilas.png) ;
+    background-image: url(img/plume.jpg);
+    background-size: cover;
+    background-repeat:no-repeat
+}
+   
+
+
+.bodyPagePrincipal{
+    background-image: url(img/plume.jpg);
+}
+
+h1{
+    font-family:var(--fontFamilyTitre);
+    font-size:var(--fontSizeParagraphe)
+}
+
+.pageAccueilTexte{
+    font-size:var(--fontSizeButton);
+    margin-bottom:5px;
+    padding-left:20px;
+    padding-bottom:10px;
+}
+
+.pageAccueilTexte a,
+.containerFormulaireInscription a,
+.containerPageAfficher a,
+.containerPageModifierUnePersonne a,
+.containerRecuperationModifierUnePersonne a,
+.containerSuppressionDeUtilisateur a{
+    display:inline-block;
+    text-decoration:none;
+    padding:0 10px;
+   
+    transition:transform 0.5s;
+}
+
+.pageAccueilTexte a:hover,
+.containerFormulaireInscription a:hover,
+.containerPageAfficher a:hover,
+.containerPageModifierUnePersonne a:hover,
+.containerRecuperationModifierUnePersonne a:hover,
+.containerSuppressionDeUtilisateur a:hover{
+    transform:scale(1.2)
+}
+
+/***********************FORMULAIRE INSCRIPTION.PHP ********************/
+
+.containerFormulaireInscription{
+    padding:20px 0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    background-image:url(img/ciel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.containerFormulaireInscription form{
+   border:2px solid black;
+
+    width:50%;
+    height:80%;
+    backdrop-filter:blur(5px);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center
+   
+}
+
+.containerFormulaireInscription input{
+   
+    text-align:center;
+    margin-bottom:7px;
+    outline:none;
+    transition:background-color 0.5s
+}
+
+.containerFormulaireInscription input:focus{
+    background-color:#0171ad ;
+}
+
+.containerFormulaireInscription  label{
+    /* font-family:var(--fontFamilyTitre); */
+    font-size:var(--fontSizeForm)
+}
+
+.containerFormulaireInscription form h2{
+    text-align:center;
+    font-family:var(--fontFamilyTitre);
+    font-size:var(--fontSizeButton)
+}
+
+.containerFormulaireInscription button{
+    margin-top:15px;
+    cursor:pointer;
+    padding:5px 10px;
+    background: transparent;
+    border-radius:5px;
+    position:relative;
+    z-index:3;
+    overflow:hidden;
+    font-size:var(--fontSizeForm)
+}
+
+.containerFormulaireInscription button:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transform:translateX(-100%);
+    background-color: #0171ad;
+    border-radius:5px;
+    transition:transform 0.7s;
+    z-index:-1;
+
+}
+
+.containerFormulaireInscription button:hover:before{
+    transform: translateX(0);
+}
+
+
+
+/* .h1FormulaireAjoutUtilisateur{
+    font-size:var(--fontSizeTitrePageInscription)
+} */
+
+.containerFormulaireInscription label,.containerFormulaireInscription input{
+    display:block;
+    text-align:center;
+    
+}
+
+.containerFormulaireInscription p{
+    font-size:var(--fontSizeForm);
+    padding-top:10px;
+}
+.containerFormulaireInscription a{
+    text-align:center;
+    display:block;
+   
+}
+
+
+
+/********************************RECUPERATION.PHP **************************/
+
+.containerRecuperation{
+    background-image:url('img/nuages.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+ 
+}
+
+.containerRecuperation h2{
+    text-align:center;
+    padding-top:5% ;
+    padding-right:10%;
+    padding-left:10%;
+    font-size:var(--fontSizeTitrePageRecuperation)
+    /* font-family:var(--fontFamilyTitre) */
+}
+
+.containerRecuperation p{
+    padding-top:5%;
+    text-align:center;
+    font-size:var(--fontSizeParagraphe)
+}
+
+
+
+
+/********************************************AFFICHER.PHP ******************/
+
+.containerPageAfficher{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-image:url(img/merNuage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+}
+.containerPageAfficher h2{
+    font-family:var(--fontFamilyTitre);
+    font-size:var(--fontSizeTitrePageRecuperation);
+    margin-bottom:5x;
+}
+
+.containerPageAfficher table {
+    border-collapse:collapse;
+    width:90%;
+ 
+  }
+  
+  td,th {
+    border: 1px solid black;
+    text-align:center;
+    padding:10px 0;
+    font-size:var(--fontSizeForm)
+
+  }
+
+  .containerPageAfficher td a 
+  {
+    text-decoration:none;
+    cursor:pointer;
+    transition:color 0.5s;
+  }
+
+  .containerPageAfficher td a:hover{
+    color:rgb(192, 138, 31)
+  }
+
+  .containerPageAfficher p{
+    padding-top:5%;
+    text-align:center;
+    font-size:var(--fontSizeParagraphe);
+    margin-bottom:15px;
+}
+
+
+  /***********************************AFFICHER UNE PERSONNE ******************************/
+
+  .containerPageModifierUnePersonne{
+        padding:10px 0;
+        background-image: url('img/nuages2.jpg');
+        background-image: cover;
+        background-repeat:no-repeat;
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+  }
+
+  
+  .containerPageModifierUnePersonne form{
+    width:50%;
+    border:2px solid black;
+    /* height:50%; */
+    /* margin:auto;
+    padding-top:20%; */
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    padding:30px;
+    box-shadow:10px 10px 3px rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+ 
+  }
+
+  .containerPageModifierUnePersonne h2{
+        font-size:var(--fontSizeButton);
+        font-family:var(--fontFamilyTitre);
+        padding-bottom:10px;
+  }
+
+  .containerPageModifierUnePersonne label{
+    padding-bottom:5px;
+    padding-top:10px;
+    font-size:var(--fontSizeForm)
+  }
+
+  .containerPageModifierUnePersonne input{
+    outline: none;
+    transition:background-color 0.5s;
+    text-align:center;
+    border-radius:5px;
+    padding:5px 0
+  }
+ 
+  .containerPageModifierUnePersonne input:focus{
+    background-color:aquamarine
+  }
+
+  
+  .containerPageModifierUnePersonne button{
+    width:60%;
+    font-size:var(--fontSizeForm);
+    padding:10px 20px;
+    cursor:pointer;
+    background:transparent;
+    box-shadow:5px 5px 2px rgba(0,0,0,0.8);
+    margin:auto;
+    margin-top:20px;
+    position:relative;
+    z-index:3;
+    overflow:hidden;
+   
+  }
+
+  .containerPageModifierUnePersonne button:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transform:translateX(-100%);
+    background-color:#fff;
+    z-index:-1;  
+    transition:transform 0.8s}
+
+  .containerPageModifierUnePersonne button:hover:before{
+    transform:translateX(0)
+  }
+
+   .containerPageModifierUnePersonne p{
+    padding-top:5%;
+    text-align:center;
+    font-size:var(--fontSizeForm);
+    margin-bottom:15px;
+}
+
+
+
+/**************RECUPERATIONMODIFIERPERSONNE.PHP *************************/
+/************SUPPRIMERUTILISATEUR.PHP *******************/
+
+.containerRecuperationModifierUnePersonne,
+.containerSuppressionDeUtilisateur{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    background-image: url(img/nuageEtPierre.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.containerRecuperationModifierUnePersonne h2,
+.containerSuppressionDeUtilisateur h2{
+    font-size:var(--fontSizeTitrePageInscription);
+    font-family:var(--fontFamilyTitre);
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.containerRecuperationModifierUnePersonne p,
+.containerSuppressionDeUtilisateur p{
+    font-size:var(--fontSizeButton)
+}
+
+/*************************MEDIA QUERIES ****************************/
+
+@media screen and (max-width:600px){
+    .containerFormulaireInscription form,
+    .containerPageModifierUnePersonne form{
+        width:80%
+    }
+}
+
+  
+
+  
